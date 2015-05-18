@@ -93,11 +93,20 @@ define(function() {
     },
 
     square : function(arr) {
-
+      arr2 = arr.map(function(elem) {
+        return Math.pow(elem, 2);
+      })
+      return arr2;
     },
 
     findAllOccurrences : function(arr, target) {
-
+      occ = [];
+      for (var i = 0, len = arr.length; i < len; i++) {
+        if (arr[i] === target) {
+          occ.push(i);
+        }
+      }
+      return occ;
     }
   };
 });
